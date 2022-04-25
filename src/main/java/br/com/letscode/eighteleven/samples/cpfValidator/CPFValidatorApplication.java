@@ -8,6 +8,7 @@ import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
 @OpenAPIDefinition(info = @Info(title = "Sample api", version = "1.0", description = "Sample API"))
+@EnableCaching
 public class CPFValidatorApplication {
 
 	public static void main(String[] args) {

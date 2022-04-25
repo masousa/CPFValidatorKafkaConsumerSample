@@ -17,6 +17,8 @@ public class CreateRegistroCPFService {
 
     private final RegistroCPFRepository registroCPFRepository;
 
+
+    @CacheEvict(cacheNames = "statuscpf", allEntries = true)
     public AddResponseCPF execute(AddRequestCPF addRequestCPF){
         Optional<RegistroCPF> registroExistente = registroCPFRepository.findFirstByCpf(addRequestCPF.getCPF());
         String uuid = UUID.randomUUID().toString();
