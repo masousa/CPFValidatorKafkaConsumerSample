@@ -24,6 +24,7 @@ public class GetCPFStatusService {
     private final ReclamacoesCPFRepository reclamacoesCPFRepository;
 
 
+    @Cacheable(cacheNames = "statuscpf", key = "#cpf")
     public StatusCPF execute(String cpf){
         log.info("Querying information for cpf {}", cpf);
         Optional<RegistroCPF> optionalRegistroCPF = registroCPFRepository.

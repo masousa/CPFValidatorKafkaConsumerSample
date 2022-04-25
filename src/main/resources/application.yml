@@ -24,6 +24,11 @@ spring:
       #      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: br.com.letscode.eighteleven.samples.cpfValidator.jms.deserializer.AddRequestDeserializer
       group-id: group_id
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
 
 auto:
   create:

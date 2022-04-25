@@ -13,6 +13,7 @@ public class CreateComplainService {
 
     private final ReclamacoesCPFRepository reclamacoesCPFRepository;
 
+    @CacheEvict(cacheNames = "statuscpf", allEntries = true)
     public void execute(RequestComplainBody requestComplainBody){
 
         ReclamacoesCPF reclamacoesCPF = new ReclamacoesCPF();
